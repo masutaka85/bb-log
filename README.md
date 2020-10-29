@@ -30,9 +30,10 @@ BPD(Baseball Player Database)
 | password | string | null: false | 
 
 ### association
-- 
+- has_many :stats
+- has_one :total
 
-### statsテーブル
+## statsテーブル
 
 | column           | type       | option                         | 
 | ---------------- | ---------- | ------------------------------ | 
@@ -43,7 +44,14 @@ BPD(Baseball Player Database)
 | kiyou_id         | string     | null: false                    | 
 | user             | references | null: false, foreign_key: true |
 
-### fieldersテーブル
+### association
+- belongs_to :user
+- has_many :memos
+- has_one :pitcher
+- has_one :fielder
+- belongs_to :total
+
+## fieldersテーブル
 
 | column         | type       | option                         | 
 | -------------- | ---------- | ------------------------------ | 
@@ -62,7 +70,11 @@ BPD(Baseball Player Database)
 | user           | references | null: false, foreign_key: true | 
 | stat           | references | null: false, foreign_key: true | 
 
-### pitchersテーブル
+### association
+- has_one :stat
+- belongs_to :total
+
+## pitchersテーブル
 
 | column       | type       | option                         | 
 | ------------ | ---------- | ------------------------------ | 
@@ -80,16 +92,29 @@ BPD(Baseball Player Database)
 | user         | references | null: false, foreign_key: true | 
 | stat         | references | null: false, foreign_key: true | 
 
-### memosテーブル
+### association
+- has_one :stat
+- belongs_to :total
+
+## memosテーブル
 | column | type       | option                         | 
 | ------ | ---------- | ------------------------------ | 
 | memo   | text       | null: false                    | 
 | stat   | references | null: false, foreign_key: true | 
 
-### totalsテーブル
+### association
+- belongs_to :stat
+
+## totalsテーブル
 | column  | type       | option                         | 
 | ------- | ---------- | ------------------------------ | 
 | user    | references | null: false, foreign_key: true | 
 | stat    | references | null: false, foreign_key: true | 
 | fielder | references | null: false, foreign_key: true | 
 | pitcher | references | null: false, foreign_key: true | 
+
+### association
+- has_one :user
+- has_many :stats
+- has_many :pitchers
+- has_many :fielders
