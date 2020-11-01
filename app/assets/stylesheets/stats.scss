@@ -1,0 +1,76 @@
+// Place all the styles related to the stats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color:white;
+}
+
+.header-bar {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+}
+
+.title-btn {
+  height: 80px;
+  margin-left: 100px;
+}
+
+.header-list {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.list {
+  color: black;
+  padding-left: 150px;
+  text-decoration: none;
+}
+
+.top-image {
+  height: 800px;
+  background-image: url("top_image.jpg");
+  position: relative;
+}
+
+.top-title-text {
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  font-family: 'Noto Serif JP', sans-serif;
+  position: absolute;
+  top: 70px;
+  left: 100px;
+}
+
+.top-text {
+  font-size: 35px;
+  color: white;
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  font-family: 'Noto Serif JP', sans-serif;
+}
+
+.log-in {
+  padding: 10 30px;
+}
+
+.log-in-btn {
+  font-size: 30px;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 400px;
+  left: 100px;
+  border: white 1px solid;
+  font-weight: bold;
+  font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
+  padding: 0px 30px;
+}

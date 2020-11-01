@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BbLog</title>
+    <title>Baseball Player Database</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <header class="header">
+      <div class="header-bar">
+        <%= link_to image_tag("bpd_logo.png", class:"title-btn"), root_path %>
+        <ul class="header-list">
+          <a class="list" href="#">日別成績</a>
+          <a class="list" href="#">通算成績</a>
+          <a class="list" href="#">自動成績計算機</a>
+        </ul>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
