@@ -22,7 +22,7 @@
 
 .header-list {
   display: flex;
-  justify-content: right;
+  justify-content: space-around;
   align-items: center;
   margin-left: 100px;
 }
@@ -141,4 +141,8 @@
   margin: 20px 5px;
   width: 80px;
   background-color: palegoldenrod;
+}
+
+.r-facebook-btn {
+
 }
