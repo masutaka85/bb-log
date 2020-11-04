@@ -19,7 +19,19 @@
           <a class="list" href="#">通算成績</a>
           <a class="list" href="#">自動成績計算機</a>
         </ul>
+        <div class="header-btn-box">
+        <% if user_signed_in? %>
+          <%# <li class="header-btn"><%= "#{current_user.nickname}" %>
+          <li><%= link_to "マイページ", "#", class: "header-btn" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header-btn" %></li>
+        <% else %>
+          <p>ログインしていません</p>
+          <li class="header-btn"><%= link_to 'ログイン', new_user_session_path %></li>
+          <li class="header-btn"><%= link_to '新規登録', new_user_registration_path %></li>
+        <% end %>
+        </div>
       </div>
+      
     </header>
     <%= yield %>
   </body>
