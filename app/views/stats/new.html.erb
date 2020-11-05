@@ -1,0 +1,47 @@
+<div class="stats-image">
+  <%= form_with model: @stat, url: stats_path, local: true do |f| %>
+  <div class="common-stats">
+    <div class="stats">
+      日付
+      <label class="form">
+      <%= f.date_field :date, class:"date", id:"game-date"%>
+      </label>
+    </div>
+    <div class="stats">
+      詳細
+      <label class="form">
+      <%= f.text_area :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+      </label>
+    </div>
+    <div class="stats">
+      出場ポジション
+      <label class="form">
+      <%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class:"select-box", id:"position-category"})%>
+      </label>
+    </div>
+    <div class="stats">
+      打順
+      <label class="form">
+      <%= f.collection_select(:batting_order_id, BattingOrder.all, :id, :name, {}, {class:"select-box", id:"order-category"})%>
+      </label>
+    </div>
+    <div class="stats">
+      起用法
+      <label class="form">
+      <%= f.collection_select(:kiyou_id, Kiyou.all, :id, :name, {}, {class:"select-box", id:"kiyouhou-category"})%>
+      </label>
+    </div>
+    <div class="actions">
+      <%= f.submit "登録する", class:"submit" %>
+    </div>
+  </div>
+  <% end %>
+
+  <div class="pitcher-btn">
+    <%= link_to "投手", new_user_registration_path, class:"stats-btn" %>
+  </div>
+  <div class="fielder-btn">
+    <%= link_to "野手", new_user_registration_path, class:"stats-btn2" %>
+  </div>
+  
+</div>

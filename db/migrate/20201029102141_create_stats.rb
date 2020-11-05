@@ -6,6 +6,7 @@ class CreateStats < ActiveRecord::Migration[6.0]
       t.integer    :position_id
       t.integer    :batting_order_id
       t.integer    :kiyou_id,         null: false
+      t.references :user,          null: false, foreign_key: true
       t.timestamps
     end
   end

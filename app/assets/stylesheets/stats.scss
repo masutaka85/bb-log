@@ -52,6 +52,7 @@
 
 .top-image {
   height: 800px;
+  width: 100vw;
   background-image: url("top_image.jpg");
   position: relative;
 }
@@ -75,11 +76,21 @@
   font-family: 'Noto Serif JP', sans-serif;
 }
 
-.log-in {
+.stats-image {
+  height: 800px;
+  width: 100vw;
+  background-image: url("stadium.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats-btn-box {
   padding: 10 30px;
 }
 
-.log-in-btn {
+.stats-btn {
   font-size: 30px;
   text-decoration: none;
   background-color: white;
@@ -87,6 +98,20 @@
   position: absolute;
   top: 400px;
   left: 100px;
+  border: white 1px solid;
+  font-weight: bold;
+  font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
+  padding: 0px 30px;
+}
+
+.stats-btn2 {
+  font-size: 30px;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 400px;
+  left: 250px;
   border: white 1px solid;
   font-weight: bold;
   font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
@@ -137,12 +162,31 @@
 }
 
 .submit {
-  padding: 10px 10px 8px;
+  padding: 5px 10px;
   margin: 20px 5px;
   width: 80px;
   background-color: palegoldenrod;
 }
 
-.r-facebook-btn {
+.common-stats {
+  margin-top: 50px;
+  border: black 3px;
+  border-style: dashed;
+  width: 100%;
+  background-color: #E6FFE9;
+}
 
+.stats {
+  margin: 30px;
+  font-size: 25px;
+  font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
+}
+
+textarea {
+  height: 100px;
+  width: 200px;
+}
+
+select {
+  height: 30px;
 }

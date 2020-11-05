@@ -27,8 +27,10 @@ ActiveRecord::Schema.define(version: 2020_11_02_144130) do
     t.integer "position_id"
     t.integer "batting_order_id"
     t.integer "kiyou_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_stats_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -45,4 +47,5 @@ ActiveRecord::Schema.define(version: 2020_11_02_144130) do
   end
 
   add_foreign_key "sns_credentials", "users"
+  add_foreign_key "stats", "users"
 end
