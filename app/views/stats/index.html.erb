@@ -5,7 +5,9 @@
   <div class="top-text">
     己の現実を受け入れ、更なる進化を
   </div>
-  <div class="log-in">
-    <%= link_to "Log In", new_user_registration_path, class:"log-in-btn" %>
+  <% if user_signed_in?%>
+  <div class="stats-btn-box">
+    <%= link_to "成績入力へ", new_stat_path, class:"stats-btn" %>
   </div>
+  <% end %>
 </div>
