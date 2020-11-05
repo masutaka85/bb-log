@@ -4,5 +4,5 @@ devise_for :users, controllers: {
   registrations: 'users/registrations'
 }
   root to: "stats#index"
-  resources :stats, only: [:index, :new]
+  resources :stats, only: [:index, :new, :create]
 end
