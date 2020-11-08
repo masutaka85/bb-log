@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_144130) do
+ActiveRecord::Schema.define(version: 2020_11_08_120235) do
+
+  create_table "fielders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "daseki"
+    t.integer "hit"
+    t.integer "two_base_hit"
+    t.integer "three_base_hit"
+    t.integer "homerun"
+    t.integer "daten"
+    t.integer "run"
+    t.integer "strike_out"
+    t.integer "walk_dead"
+    t.integer "sacrifice"
+    t.integer "steal"
+    t.integer "error"
+    t.bigint "user_id", null: false
+    t.bigint "stat_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["stat_id"], name: "index_fielders_on_stat_id"
+    t.index ["user_id"], name: "index_fielders_on_user_id"
+  end
 
   create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "provider"
@@ -46,6 +67,8 @@ ActiveRecord::Schema.define(version: 2020_11_02_144130) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "fielders", "stats"
+  add_foreign_key "fielders", "users"
   add_foreign_key "sns_credentials", "users"
   add_foreign_key "stats", "users"
 end

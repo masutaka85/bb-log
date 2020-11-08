@@ -1,0 +1,2 @@
+class Fielder < ApplicationRecord
+end
