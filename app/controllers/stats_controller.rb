@@ -11,7 +11,7 @@ class StatsController < ApplicationController
   def create
     @stat = Stat.create(stat_params)
     if @stat.save
-      redirect_to root_path
+      redirect_to fielders_path
     else
       render :new
     end
