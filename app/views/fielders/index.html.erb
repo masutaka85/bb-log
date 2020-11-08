@@ -1,0 +1,93 @@
+<div class="fielders-image">
+  <%= form_with model: @stat, url: stats_path, local: true do |f| %>
+  <div class="fielders-stats">
+    <div class="fielders-stats-1">
+      <div class="stats">
+        打席
+        <label class="form">
+        <%= f.number_field :daseki, class:"daseki", id:"daseki-number"%>
+        </label>
+      </div>
+      <div class="stats">
+        安打
+        <label class="form">
+        <%= f.number_field :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+        </label>
+      </div>
+      <div class="stats">
+        二塁打
+        <label class="form">
+        <%= f.number_field :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+        </label>
+      </div>
+      <div class="stats">
+        三塁打
+        <label class="form">
+        <%= f.number_field :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+        </label>
+      </div>
+      <div class="stats">
+        本塁打
+        <label class="form">
+        <%= f.number_field :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+        </label>
+      </div>
+      <div class="stats">
+        打点
+        <label class="form">
+        <%= f.number_field :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+        </label>
+      </div>
+      <div class="stats">
+        得点
+        <label class="form">
+        <%= f.number_field :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+        </label>
+      </div>
+    </div>
+    <div class="fielders-stats-2">
+      <div class="stats">
+        三振
+        <label class="form">
+        <%= f.number_field :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+        </label>
+      </div>
+      <div class="stats">
+        四死球
+        <label class="form">
+        <%= f.number_field :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+        </label>
+      </div>
+      <div class="stats">
+        犠打
+        <label class="form">
+        <%= f.number_field :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+        </label>
+      </div>
+      <div class="stats">
+        盗塁
+        <label class="form">
+        <%= f.number_field :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+        </label>
+      </div>
+      <div class="stats">
+        エラー
+        <label class="form">
+        <%= f.number_field :text, class:"detail", id:"game-detail", placeholder:"(例)ベンチスタートだったが７回に代打として出場、など"%>
+        </label>
+      </div>
+      <div class="actions">
+        <%= f.submit "登録して投手画面に進む", class:"submit" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+  <%# <div class="pitcher-btn">
+    <%= link_to "投手", new_user_registration_path, class:"stats-btn" %>
+  <%# </div> %>
+  <%# <div class="fielder-btn"> %>
+    <%# <%= link_to "野手", new_user_registration_path, class:"stats-btn2" %> 
+  <%# </div> %> 
+  
+</div>
