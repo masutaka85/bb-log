@@ -5,4 +5,5 @@ devise_for :users, controllers: {
 }
   root to: "stats#index"
   resources :stats, only: [:index, :new, :create]
+  resources :fielders
 end
